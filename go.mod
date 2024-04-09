@@ -1,4 +1,4 @@
-module github.com/mcuadros/go-defaults
+module go-defaults
 
 go 1.22
 
