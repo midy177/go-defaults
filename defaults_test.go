@@ -92,8 +92,8 @@ func (s *DefaultsSuite) assertTypes(c *C, foo *ExampleBasic) {
 	c.Assert(foo.Second, Equals, time.Second)
 	c.Assert(foo.StringSlice, DeepEquals, []string{"1", "2", "3", "4"})
 	c.Assert(foo.IntSlice, DeepEquals, []int{1, 2, 3, 4})
-	c.Assert(foo.IntSliceSlice, DeepEquals, [][]int{[]int{1}, []int{2}, []int{3}, []int{4}})
-	c.Assert(foo.StringSliceSlice, DeepEquals, [][]string{[]string{"1"}, []string{}})
+	c.Assert(foo.IntSliceSlice, DeepEquals, [][]int{{1}, {2}, {3}, {4}})
+	c.Assert(foo.StringSliceSlice, DeepEquals, [][]string{{"1", "2", "3"}, {}})
 }
 
 func (s *DefaultsSuite) TestSetDefaultsWithValues(c *C) {
