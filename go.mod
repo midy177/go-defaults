@@ -1,4 +1,4 @@
-module go-defaults
+module github.com/midy177/go-defaults
 
 go 1.22
 
